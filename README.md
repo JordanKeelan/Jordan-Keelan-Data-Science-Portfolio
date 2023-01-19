@@ -12,7 +12,7 @@
 * Statistical Analysis using R, two topics investigated:
   1. Has the covid-19 pandemic created a significant increase in emergency shleter occupancy? Has it increased the quantity of people experiencing homelessness?
   2. Did the COVID-19 pandemic result in a greater proportion of women seeking emergency shelter compared to other the 2014 oil downturn?
-    * [Reporting on 'Shadow Pandemic' of increased domestic violence during covid lockdowns.](https://www.alberta.ca/article-the-shadow-pandemic.aspx)
+      * [Reporting on 'Shadow Pandemic' of increased domestic violence during covid lockdowns.](https://www.alberta.ca/article-the-shadow-pandemic.aspx)
 * A Simple Linear Regression Model was employed to determine a trend in emergency shelter occupancy rates, to 95% confidence, and compared to actual values recorded.
 * Analysis of Difference of Proportion carried out to identify statistically significant increased in womans shelter occupancy in the first 12 months of the Covid-19 lockdown compared to first 12 months of 2014 downturn.
 * Dataset cleaning and transformations done in R
