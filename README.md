@@ -1,4 +1,4 @@
-# JordanKeelan Projects Portfolio
+# Jordan Keelan Projects Portfolio
 
 ## [Modeling NHL Goalie Save Percentages Based on Player Attributes](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression)
 * Multiple Linear Regression Model, written in R, that predicts what a individual goalies save percentage will be based on their attributes
