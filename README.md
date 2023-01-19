@@ -6,5 +6,5 @@
 * Manually conducted backward elimination model selection, resulting in valid interactive model that outperformed autometed step-wise selection in RMSE and $R^{2}_{adj}$
 * Conducted model diagnostics ensuring satisfaction of Linearity, Independence, Equal Variance, Normality of Residuals, Multicolinearity, and Outlier assumptions.
 * [Presented findings in accomanied PDF](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/DATA%20603-L02%20Group%201%20Project%20-%20Fall22%20-%20NHL%20Goalies.pdf)
-
+![R Multiple Linear Regression Model Output](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/Model_Output.png?raw=true)
 
