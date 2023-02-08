@@ -10,6 +10,8 @@ Our approach to solving this problem involved the use of Multiple Linear Regress
 ## Model Development
 We used Multiple Linear Regression Model to predict an individual goaltender's save percentage. The model was developed in R programming language, and we used ggplot for data visualization. To improve the consistency of our predictions, we identified the cutoff values for 'games played' through statistical analysis. The model was then manually optimized through backward elimination model selection, which resulted in a more accurate model compared to the automated step-wise selection process.
 
+![R Multiple Linear Regression Model Output](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/Model_Output.png?raw=true)
+
 ## Model Diagnostics
 To ensure the validity of our model, we conducted several model diagnostics, including Linearity, Independence, Equal Variance, Normality of Residuals, Multicolinearity, and Outlier assumptions. We made sure that all the assumptions were satisfied to ensure the robustness and accuracy of our predictions.
 
@@ -25,9 +27,8 @@ Despite its limitations, our model was reasonably effective, with an adjusted R-
 Through this project, I gained a deeper understanding of the importance of proper model selection for specific problems, the process of feature selection and model development, and the significance of model diagnostics through assumption testing. I also learned about the limitations and strengths of multiple linear regression models and how they can be used in real-world applications.
 
 * [Findings presented in accomanied PDF](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/DATA%20603-L02%20Group%201%20Project%20-%20Fall22%20-%20NHL%20Goalies.pdf)
-![R Multiple Linear Regression Model Output](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/Model_Output.png?raw=true)
 
-
+---
 
 # [Statistical Comparison of Environmental Effects on Alberta Emergency Shelter Occupancy](https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis)
 
@@ -48,11 +49,12 @@ The project investigated two topics:
 ## Findings
 Our linear regression model outlined the decline in emergency shelter occupancy from 2014 to 2020.  Though, as this is time-series data, no real conclusions could be drawn as to the long term effect of covid-19 on shelter occupancy. 
 
-
+![Linear Regression model](https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/linear_regression.png?raw=true)
 
 Our proportion comparison of the two downturns did show that womans shelter occupancy was a larger proportion of total shelter occupancy during the first year of the covid-19 pandemic than during the first year of the 2014 downturn. 
 
-
+![Shelter occupancy and womans proportion over time](https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/combined_shelter_occ.png?raw=true)
+![Mean proportion 2020](https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/womans_proportion.png?raw=true)
 
 ## Takeaways
 This project provides valuable information on the impact of societal events on emergency shelter occupancy in Alberta. The results of the Simple Linear Regression Model and the Analysis of Difference of Proportion help to understand the trend in emergency shelter occupancy rates and the proportion of women seeking emergency shelter during the COVID-19 pandemic and the 2014 oil downturn. The findings of the project can be useful for policymakers, government agencies, and organizations working to address the issue of homelessness.
