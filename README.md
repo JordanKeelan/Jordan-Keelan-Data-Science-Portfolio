@@ -16,18 +16,50 @@ To ensure the validity of our model, we conducted several model diagnostics, inc
 ## Conclusion
 Our project demonstrated the feasibility of using Multiple Linear Regression Model to predict the save percentage of NHL goaltenders based on their individual attributes. Our approach showed an improvement in the accuracy of predictions compared to the traditional methods. The model was optimized through backward elimination model selection, and the model diagnostics confirmed that all the assumptions were satisfied, ensuring the robustness of our predictions.
 
-## My Takeaways:
-This problem seemed interesting to solve, and so we ventured to try. As this was our first venture into multiple linear regression, we suffered from trying to make a question fit a model, and not a model fit a question. Along the way I noted that our approach was not without flaws.  Notably, the response variabe of our model is a proportion, so its should be modeled with a sigmoidal curve, not linear. Those advanced statistical models were outside the scope of this class. However, the acutal values for save percentage in the dataset that the model was fit on have low spread (all values between 0.87 and 0.94), and through all our testing we never produced an impossible value (<0, >1). In conclusion our model was reasonably effective (adjusted R-squared value of 0.4), its output is not without it caveats. 
+## What I Learned
+
+In this project, I explored the use of Multiple Linear Regression to evaluate and predict the performance of NHL goaltenders. I encountered some challenges along the way, such as realizing that the response variable of our model, save percentage, was better modeled with a sigmoidal curve rather than a linear model. However, since advanced statistical models were beyond the scope of the class, we continued to work with multiple linear regression.
+
+Despite its limitations, our model was reasonably effective, with an adjusted R-squared value of 0.4, and produced results that were within the acceptable range of values for the response variable. 
+
+Through this project, I gained a deeper understanding of the importance of proper model selection for specific problems, the process of feature selection and model development, and the significance of model diagnostics through assumption testing. I also learned about the limitations and strengths of multiple linear regression models and how they can be used in real-world applications.
 
 * [Findings presented in accomanied PDF](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/DATA%20603-L02%20Group%201%20Project%20-%20Fall22%20-%20NHL%20Goalies.pdf)
 ![R Multiple Linear Regression Model Output](https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/Model_Output.png?raw=true)
 
-## [Statistical Comparison of Environmental Effects on Alberta Emergency Shelter Occupancy](https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis)
-* Statistical Analysis using R, two topics investigated:
-  1. Has the covid-19 pandemic created a significant increase in emergency shleter occupancy? Has it increased the quantity of people experiencing homelessness?
-  2. Did the COVID-19 pandemic result in a greater proportion of women seeking emergency shelter compared to other the 2014 oil downturn?
-      * [Reporting on 'Shadow Pandemic' of increased domestic violence during covid lockdowns.](https://www.alberta.ca/article-the-shadow-pandemic.aspx)
-* A Simple Linear Regression Model was employed to determine a trend in emergency shelter occupancy rates, to 95% confidence, and compared to actual values recorded.
-* Analysis of Difference of Proportion carried out to identify statistically significant increased in womans shelter occupancy in the first 12 months of the Covid-19 lockdown compared to first 12 months of 2014 downturn.
-* Dataset cleaning and transformations done in R
+
+
+# [Statistical Comparison of Environmental Effects on Alberta Emergency Shelter Occupancy](https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis)
+
+## Problem Statement
+The purpose of this project is to investigate the impact of two societal events - the COVID-19 pandemic and the 2014 oil downturn - on emergency shelter occupancy in Alberta. The project aims to determine if the COVID-19 pandemic created a significant change in emergency shelter occupancy and if it has resulted in a greater proportion of women seeking emergency shelter compared to the 2014 oil downturn.
+
+## Approach
+The project investigated two topics:
+
+1. Has the COVID-19 pandemic created a significant difference in emergency shelter occupancy? Has it increased or decreased the quantity of people experiencing homelessness?
+
+  We employed a linear regression Model to determine a trend in emergency shelter occupancy rates and compared the results to actual values recorded. The analysis was performed using R programming language and the dataset was cleaned and transformed in R. 
+
+2. Did the COVID-19 pandemic result in a greater proportion of women seeking emergency shelter compared to other the 2014 oil downturn?
+
+  An Analysis of Difference of Proportion was carried out to identify a statistically significant increase in women's shelter occupancy in the first 12 months of the COVID-19 lockdown compared to the first 12 months of the 2014 downturn.
+
+## Findings
+Our linear regression model outlined the decline in emergency shelter occupancy from 2014 to 2020.  Though, as this is time-series data, no real conclusions could be drawn as to the long term effect of covid-19 on shelter occupancy. 
+
+
+
+Our proportion comparison of the two downturns did show that womans shelter occupancy was a larger proportion of total shelter occupancy during the first year of the covid-19 pandemic than during the first year of the 2014 downturn. 
+
+
+
+## Takeaways
+This project provides valuable information on the impact of societal events on emergency shelter occupancy in Alberta. The results of the Simple Linear Regression Model and the Analysis of Difference of Proportion help to understand the trend in emergency shelter occupancy rates and the proportion of women seeking emergency shelter during the COVID-19 pandemic and the 2014 oil downturn. The findings of the project can be useful for policymakers, government agencies, and organizations working to address the issue of homelessness.
+
+This project served again as a great learning tool or me.  As my first foray into linear regression and proportion analysis, I learned a great deal about the limitations of strength of each moethod. Again here, our analysis suffers from the fact that we were given a set of tools and looked for a problem to solve with them, rather than identifying a problem and selecting the best method to solve it. In this case, knowledge of time-series analysis would have made out analysis more meaningful.  
+
+Regaurdless, it was interesting to see that the proportion of emergency occupants in womans shelters did increase in the covid-19 pandemic, but that following the pandemic that proportion hit all time lows. This is especially interesting when you consider that while emergency shelter occupancy rates were dropping steadily in 6 years prior to the pandemic.
+
+
 * [Findings presented in accomanied PDF](https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/Data%20602%20Project.docx.pdf)
