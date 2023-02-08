@@ -1,0 +1,119 @@
+html, body {
+    height: 100%;
+}
+.navbar {
+    padding: 0;
+}
+.navbar-toggler {
+    margin: 0.25rem;
+}
+#nav-list {
+    border-right: 4px solid lightgray;
+}
+.border-bottom {
+    width: 100%;
+}
+.h3 {
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+}
+h5 {
+    padding: 1rem;  
+    color: black;
+}
+h5:hover {
+    cursor: pointer;
+    color: black;
+}
+.container-border {
+    width: 50%;
+    margin-right: 40%;
+    margin-bottom: 1rem;
+    border: 2px solid lightgray;
+    border-radius: 0.3rem;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+code {
+    color: darkblue;
+}
+#screen-display {
+    overflow: hidden;
+}
+.btn-light {
+    border-color: lightgray;
+    margin: 1rem;
+}
+#top {
+    border: bottom;
+}
+ .center {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+section article {
+    margin: 15px;
+}
+img {
+        padding: 0.5rem;
+        margin: 1.5rem;
+        border: 2px solid lightgrey;
+    }
+
+
+/* Media Queries */
+/* Small devices (tablets, 768px and below) The navbar toggle appears at medium breakpoint */
+@media (max-width: 768px) {  
+    #main {
+        border-top: 4px solid lightgray;
+        display: block;
+    }
+    .navbar-collapse {
+        width: 100%;
+    }
+    .navbar-item {
+     width: 100%;
+    }
+    .container-border {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 2px solid lightgray;
+    border-radius: 0.5rem;
+    text-align: center;
+    }
+    img {
+        max-width: 100%;
+    }
+    #screen-display {
+        overflow: auto;
+    }
+    #nav-list {
+    border-right: none;
+    }
+    #main-style {
+        border-top: 4px solid lightgrey;
+    }
+    
+}
+/*Medium Devices and larger*/
+@media (min-width: 769px) {
+    .back-to-top {
+        width: 10vw;
+    }
+    
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+ 
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    
+}
+ 
+ 
+ 
+/*
