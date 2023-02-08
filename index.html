@@ -35,7 +35,7 @@
                 <a class="nav-link" href="#nhl">NHL Goalie Model</a>
               </li>
               <li class="navbar-item list-group-item">
-                <a class="nav-link" href="#Mass_and_Weight">Emergency Shelter Analysis</a>
+                <a class="nav-link" href="#emerg">Emergency Shelter Analysis</a>
               </li>
             </ul>
           </div>
@@ -130,7 +130,96 @@
             </section>
 
           </section>
+
+          <section class="text-wrap" id="emerg">
+            <h1><a href="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis">Impact of Societal Events on Alberta Emergency Shelter Occupancy: A Statistical Analysis</a></h1>
+            <hr />
+
+            <section class="main-section text-wrap" id="problem_statement_emerg">
+              <header class="h3">Problem Statement</header>
+              <br />
+              <article>
+              <p>
+                The purpose of this project is to investigate the impact of two societal events - the COVID-19 pandemic and the 2014 oil downturn - on emergency shelter occupancy in Alberta. The project aims to determine if the COVID-19 pandemic created a significant change in emergency shelter occupancy and if it has resulted in a greater proportion of women seeking emergency shelter compared to the 2014 oil downturn.  
+              </p>
+            </article>
+            </section>
+
+            <section class="main-section text-wrap" id="methodology_emerg">
+              <header class="h3">Methodology</header>
+              <br />
+              <article>
+              <p>
+                The project investigated two topics:
+              </p>
+                <ol>
+                  <li>
+                    <p>Has the COVID-19 pandemic created a significant difference in emergency shelter occupancy? Has it increased or decreased the quantity of people experiencing homelessness?</p>
+                    <ul>
+                      <p>We employed a linear regression Model to determine a trend in emergency shelter occupancy rates and compared the results to actual values recorded. The analysis was performed using R programming language and the dataset was cleaned and transformed in R.</p>
+                    </ul>
+                  </li>
+                  <li>
+                    <p>Did the COVID-19 pandemic result in a greater proportion of women seeking emergency shelter compared to other the 2014 oil downturn?</p>
+                    <ul>
+                      <p>An Analysis of Difference of Proportion was carried out to identify a statistically significant increase in women's shelter occupancy in the first 12 months of the COVID-19 lockdown compared to the first 12 months of the 2014 downturn.</p>
+                    </ul>
+                  </li>
+                </ol>
+            </section>
+
+            <section class="main-section text-wrap" id="model_dev_nhl">
+              <header class="h3">Model Development</header>
+              <br />
+              <article>
+              <p>
+                We used Multiple Linear Regression Model to predict an individual goaltender’s save percentage. The model was developed in R programming language, and we used ggplot for data visualization. To improve the consistency of our predictions, we identified the cutoff values for ‘games played’ through statistical analysis. The model was then manually optimized through backward elimination model selection, which resulted in a more accurate model compared to the automated step-wise selection process.
+              </p>
+              </article>
+              <img src="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/Model_Output.png?raw=true", class="center", alt="R Model Output">
+            </section>
+
+            <section class="main-section text-wrap" id="model_diag_nhl">
+              <header class="h3">Model Diagnostics</header>
+              <br />
+              <article>
+              <p>
+                To ensure the validity of our model, we conducted several model diagnostics, including Linearity, Independence, Equal Variance, Normality of Residuals, Multicolinearity, and Outlier assumptions. We made sure that all the assumptions were satisfied to ensure the robustness and accuracy of our predictions.
+              </p>
+            </section>
+
+            <section class="main-section text-wrap" id="conclusions_nhl">
+              <header class="h3">Conclusions</header>
+              <br />
+              <article>
+              <p>
+                Our project demonstrated the feasibility of using Multiple Linear Regression Model to predict the save percentage of NHL goaltenders based on their individual attributes. Our approach showed an improvement in the accuracy of predictions compared to the traditional methods. The model was optimized through backward elimination model selection, and the model diagnostics confirmed that all the assumptions were satisfied, ensuring the robustness of our predictions.
+              </p>
+              </article>
+            </section>
+
+            <section class="main-section text-wrap" id="learned_nhl">
+              <header class="h3">What I Learned</header>
+              <br />
+              <article>
+              <p>
+                In this project, I explored the use of Multiple Linear Regression to evaluate and predict the performance of NHL goaltenders. I encountered some challenges along the way, such as realizing that the response variable of our model, save percentage, was better modeled with a sigmoidal curve rather than a linear model. However, since advanced statistical models were beyond the scope of the class, we continued to work with multiple linear regression.
+              </p>
+              <p>
+                Despite its limitations, our model was reasonably effective, with an adjusted R-squared value of 0.4, and produced results that were within the acceptable range of values for the response variable.
+              </p>
+              <p>
+                Through this project, I gained a deeper understanding of the importance of proper model selection for specific problems, the process of feature selection and model development, and the significance of model diagnostics through assumption testing. I also learned about the limitations and strengths of multiple linear regression models and how they can be used in real-world applications.
+              </p>
+              <p>
+                <a href="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/DATA%20603-L02%20Group%201%20Project%20-%20Fall22%20-%20NHL%20Goalies.pdf">Findings Outlined in Accompanying PDF</a>
+              </p>
+              </article>
+            </section>
+
           </section>
+
+        </section>
         </main>
       </div>
     </div>
