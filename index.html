@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
@@ -17,7 +18,9 @@
     <div class="row flex-grow-1" id="screen-display">
       <!--navbar-->
       <div class="col-md-3 col-xl-2 mx-0 px-0 mh-100 overflow-auto bg-light" id="nav-list">
-        <nav class="navbar navbar-default navbar-static-top navbar-light bg-light navbar-expand-md d-flex flex-column fixed-left" id="navbar">
+        <nav
+          class="navbar navbar-default navbar-static-top navbar-light bg-light navbar-expand-md d-flex flex-column fixed-left"
+          id="navbar">
           <header id="top">
             <a style="text-decoration:none;" href="#banner">
               <h5>My Data Projects</h5>
@@ -30,6 +33,9 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav d-flex flex-column list-group-flush border-bottom">
+              <li class="navbar-item list-group-item border-top">
+                <a class="nav-link" href="#music">Spotify Popularity Modeling</a>
+              </li>
               <li class="navbar-item list-group-item border-top">
                 <a class="nav-link" href="#nhl">NHL Goalie Model</a>
               </li>
@@ -46,76 +52,355 @@
         <main id="main-doc">
 
           <!-- Add your banner here -->
-          <div class="banner", id="banner">
-            <img src="https://github.com/JordanKeelan/Jordan-Keelan-Data-Science-Portfolio/blob/main/img/headshot_scaled.jpg?raw=true" alt="Jordan Keelan">
+          <div class="banner" , id="banner">
+            <img
+              src="https://github.com/JordanKeelan/Jordan-Keelan-Data-Science-Portfolio/blob/main/img/headshot_scaled.jpg?raw=true"
+              alt="Jordan Keelan">
             <div>
-            <h1>Jordan Keelan</h1>
-            <h2>MDSA Student & Data Enthusiast</h2>
+              <h1>Jordan Keelan</h1>
+              <h2>MDSA Student & Data Enthusiast</h2>
             </div>
           </div>
 
           <section class="text-wrap" id="Introduction">
             <article>
-            <br />
-            <p>
-              As a passionate data professional, I am fascinated by the ways businesses and industries can leverage data to gain insights, optimize processes, and remain competitive. My Master of Data Science and Analytics from the University of Calgary has equipped me with the necessary skills to analyze and interpret data effectively. In my attached portfolio, you'll find several projects that showcase my abilities. I look forward to adding to this collection as I complete additional projects in the field. Thank you for your consideration.  
-            </p>
-            <p>  
-              P.S. I developed this page myself in HTML and CSS.
-            </p>
+              <br />
+              <p>
+                As a passionate data professional, I am fascinated by the ways businesses and industries can leverage
+                data to gain insights, optimize processes, and remain competitive. My Master of Data Science and
+                Analytics from the University of Calgary has equipped me with the necessary skills to analyze and
+                interpret data effectively. In my attached portfolio, you'll find several projects that showcase my
+                abilities. I look forward to adding to this collection as I complete additional projects in the field.
+                Thank you for your consideration.
+              </p>
+              <p>
+                P.S. I developed this page myself in HTML and CSS.
+              </p>
             </article>
           </section>
 
-          <section class="text-wrap" id="nhl">
-            <h1><a href="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression">Modeling NHL Goalie Save Percentages Based on Player Attributes</a></h1>
-            
+          <section class="text-wrap" id="music">
+            <h1><a href="https://github.com/kaneiscoding/DATA-606-Final-Project">Uncovering the Secrets of Song Success:
+                A Statistical Analysis of Popular Music</a></h1>
+                <p>
+                  Contributers: Jordan Keelan, Kane Smith, Scott Bennett, Aruthur Trim, Rodrigo Alvarez
+                </p>
 
-            <section class="main-section text-wrap" id="problem_statement_nhl">
+            <section class="main-section text-wrap" id="problem_statement_music">
               <header class="h3">Problem Statement</header>
               <br />
               <article>
-              <p>
-                NHL teams are big business, and they spend a lot of time and money on player selection. Each team can only dress two goaltenders, so selecting perfromative players is essential. Our goal was to take an approach to goaltender evaluation and performance prediction using data specific to individual goaltenders in a specific season and excluding various team- and game-based factors that could not only vary from year to year, but team to team, and game to game for a specific goaltender.
-              </p>
-            </article>
+                <ul>
+                  <p>As data becomes an increasingly crucial tool in the music industry, many music producers and
+                    musicians are adopting a formulaic approach to music design. By breaking down successful or
+                    unsuccessful songs into their fundamental elements and analyzing patterns influencing listener
+                    emotions, they can leverage these findings in the creation of novel music. Understanding these song
+                    features and how they contribute to popularity can help artists stay ahead of musical trends and
+                    create more impactfull music.</p>
+                  <p>This project's purpose is to analyze the features of songs (as listed in the "Summary of Variables"
+                    section above) and to develop multiple statistical models to determine the relevance of these
+                    features to a song's popularity. This analysis will provide valuable insights into the music
+                    industry and inform artists, music producers, and industry professionals on how to make informed
+                    decisions to increase the popularity of their music.</p>
+                </ul>
+              </article>
             </section>
 
-            <section class="main-section text-wrap" id="methodology_nhl">
-              <header class="h3">Methodology</header>
+            <section class="main-section text-wrap" id="data_music">
+              <header class="h3">Data</header>
               <br />
               <article>
-              <p>
-                Our approach to solving this problem involved the use of Multiple Linear Regression Model, written in R, that predicts an individual goalie’s save percentage based on their attributes. We used data visualization (ggplot) and statistical analysis to identify cutoff values for ‘games played’ to improve consistency. We manually conducted backward elimination model selection, resulting in a valid interactive model that outperformed automated step-wise selection in terms of RMSE and R squared adj.
-              </p>
+                <p>
+                  Spotify provides a robust API for extracting data from their databases. We located a previously
+                  extracted dataset containing tables on "tracks" and "artists". "Tracks" dataset contains ~600,000
+                  songs with 20 columns, variables related to specific songs.
+                </p>
+                <p>
+                  Target Variable:
+                </p>
+                <ul>
+                  <p>
+                    Popularity (int): Score between 0 and 100, is a calculated algorithm and is based, in most part, on
+                    the number of plays a tack has and how recent those plays are.
+                  </p>
+                </ul>
+                <p>
+                  Indepedent Variables:
+                </p>
+                <ol>
+                  <p>duration_ms - (integer) the length of the track in ms</p>
+
+                  <p>explicit - (boolean) explicit lyrics</p>
+
+                  <p>artists - (list) artist names</p>
+
+                  <p>danceability - (dbl) score for how suited a track is for dancing, 0.0-1.0.</p>
+
+                  <p>energy - (dbl) score for how energetic a track is perceived, 0.0-1.0.</p>
+
+                  <p>key - (int) maps Pitch class notation (E.g. 0 = C, 1 = C sharp/D flat, 2 = D, and so on.)</p>
+
+                  <p>loudness - (dbl) decibel loudness of the track range from -60 to 0 dB</p>
+
+                  <p>mode - (bool) modality of the track (0 is minor, 1 is major)</p>
+
+                  <p>speechiness - (dbl) score for how speech-like a track is, 0.0-1.0. Values close to one indicate
+                    something like a podcast (high speechiness).</p>
+
+                  <p>acousticness - (dbl) range of whether a track is acoustic (0.0-1.0)</p>
+
+                  <p>instrumentalness - (dbl) range of whether a track is instrumental (0.0-1.0)</p>
+
+                  <p>liveness - (dbl) range representing audience sounds in the track (0.0-1.0)</p>
+
+                  <p>valence - (dbl) represents how 'happy' a track is (0.0-1.0)</p>
+
+                  <p>tempo - (dbl) the temp of the track in beats per minute</p>
+
+                  <p>time_signature - (dbl) time signature of the track 3-7 (3 represents 3/4 time etc.)</p>
+                </ol>
             </section>
 
             <section class="main-section text-wrap" id="model_dev_nhl">
               <header class="h3">Model Development</header>
               <br />
               <article>
-              <p>
-                We used Multiple Linear Regression Model to predict an individual goaltender’s save percentage. The model was developed in R programming language, and we used ggplot for data visualization. To improve the consistency of our predictions, we identified the cutoff values for ‘games played’ through statistical analysis. The model was then manually optimized through backward elimination model selection, which resulted in a more accurate model compared to the automated step-wise selection process.
-              </p>
+                <p>
+                  To address the problem at hand, we implemented four different models: two aimed at predicting
+                  popularity as a continuous variable, and two aimed at determining whether a song could be classified
+                  as a "hit" or not.</p>
+                <p>
+                  The first two models utilized were linear discriminant analysis and regression tree. For the
+                  classification models, we employed classification tree and logistic regression. To make a clear
+                  distinction between hits and non-hits, we assigned a score in the 75th percentile of popularity as the
+                  threshold for a "hit." Any song with a popularity score above 42 out of 100 was considered a hit.</p>
+                <p>
+                  However, we encountered an imbalance in the training dataset, with a ratio of hits to non-hits of 1:3.
+                  To address this issue, we applied downsampling to even out the class distribution.</p>
+                </p>
               </article>
-              <img src="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/Model_Output.png?raw=true", class="center", alt="R Model Output">
             </section>
 
             <section class="main-section text-wrap" id="model_diag_nhl">
               <header class="h3">Model Diagnostics</header>
               <br />
               <article>
-              <p>
-                To ensure the validity of our model, we conducted several model diagnostics, including Linearity, Independence, Equal Variance, Normality of Residuals, Multicolinearity, and Outlier assumptions. We made sure that all the assumptions were satisfied to ensure the robustness and accuracy of our predictions.
-              </p>
+                <p>
+                  Linear Discriminant Analysis, failed assumptions and not considered valid:
+                </p>
+                <ul>
+                  <p>
+                    Multivariate Normality - mulri.norm Test - Failed. Due to failure, Quadratic Discrininant Anlalysis
+                    not conducted.
+                  </p>
+                  <p>
+                    Equalty of Variance - Levene Test - Failed.
+                  </p>
+                </ul>
+
+                <p>
+                  Logistic Regression passed assumption tests, valid model:
+                </p>
+                <ul>
+                  <p>
+                    Absence of Multicolinearity - Variance Inflation Factor Test (VIF) - All variables well below VIF 5,
+                    passed.
+                  </p>
+                  <p>
+                    Lack of Influential Outliers - Cook's Distance - Passed.
+                  </p>
+                </ul>
+
+                <p>
+                  Regression Tree and Classification Tree:
+                </p>
+                <ul>
+                  <p>
+                    Independent Variables - Passed.
+                  </p>
+                </ul>
+            </section>
+
+            <section class="main-section text-wrap" id="conclusions_music">
+              <header class="h3">Discussion</header>
+              <br />
+              <article>
+                <p>
+                  Linear Discriminant Analysis to predict song popularity scores. While it showed equally promising
+                  misclassification rates to the Classification Tree and Logistic Regression, we discarded it due to
+                  failing to meet the Multivariate Normality and Equality of Variances assumptions.
+                </p>
+                <p>
+                  Turning to a Regression Tree Model to predict popularity scores, but it was only capable of predicting
+                  scores of 20, 30, 40, and 50 with an RMSE of 15. Our analysis had a defined "hit" point of popularity
+                  score > 42, which was the 75th percentile, so we had hoped to see more terminal nodes above that range
+                  to feel that this model accomplished the goals of our investigation. Though we did balance the
+                  training data for the classification models, we did not for regression models. Looking back, we think
+                  that balancing for the regression models would have been beneficial. If we want a model that can
+                  predict popularity from 0-100, having more equality across that spectrum in the training data would
+                  likely have improved performance for our goals.
+                </p>
+                <p>
+                  The classification models, Logistic Regression and Classification Tree, obtained similar
+                  misclassification results. Initially we trained the models with 10-fold cross validation on the
+                  unbalanced dataset, and we observed misclassification rates of 24.74% for the Classification Tree and
+                  24.09% for Logistic Regression.
+                </p>
+                <p>
+                  As we defined our distinction between a "hit" and "no-hit" to be the 75th percentile, we inherently
+                  created unbalanced classes from which to train our classification models. As only 25% of songs were
+                  considered "hits". To correct this, we implemented both up and down sampling techniques into our
+                  custom "TrainControl()" functions. As both yielded near identical results, we used only down sampling
+                  for the report. Once these classification models were performed on the balanced training folds,
+                  Classification Tree and Logistic Regression saw increased misclassification rates to 35.06% and
+                  33.33%, respectively.
+                </p>
+                <p>
+                  Balancinovided some interesting insight: with the unbalanced set, we saw that three of our methods
+                  produced misclassification rates near the proportion of hits in the dataset, 25%. Following balancing
+                  our classes in the training models, we saw an overall increase in misclassification rate, with an
+                  increase in both type 1 and type 2 error. As we used the caret library to conduct this
+                  cross-validation we were unable to determine if the method we used caused both training and testing to
+                  be balanced, or just training. Perhaps if only the training data was down-sampled and predicted on a
+                  test set that was heavily skewed to no-hits the worsening of the model could be explained.
+                </p>
+                <p>
+                  In this stigation, a false positive should be considered worse than a false negative. As a false
+                  positive could cause a streaming service, or record label to invest in a song that is not going to be
+                  a hit. Alternatively, not investing money in a song could mean missed opportunity but does not
+                  directly cause loss of capital. So in the case of both classification models, type 1 error was
+                  worsened.
+                </p>
+                <p>
+                  Balancine training data for the Classification Tree improved the number of features used in modeling
+                  beyond just loudness and explicitness, and we increased from 2 to 9 internal nodes. However, it had
+                  poorer performance overall.
+                </p>
+                <p>
+                  It's important to note that this dataset is produced by Spotify, with variables that it creates
+                  through its own process. As such, it is a descriptive dataset and not optimized to predict popularity
+                  with variables designed to cluster songs into playlists or reflect user preferences. We must remember
+                  that popularity is not just a product of plays, it is assigned by Spoitfy's algorithm. It's worth
+                  considering how much influence investment, business agreements/relationships, and artist image have on
+                  song ratings.
+                </p>
+              </article>
+            </section>
+
+            <section class="main-section text-wrap" id="learned_music">
+              <header class="h3">What I Learned</header>
+              <br />
+              <article>
+                <p>
+                  What I learned from this report is the importance of careful model selection and variable selection in
+                  machine learning. The report showed that different models can produce vastly different results, even
+                  when applied to the same dataset. In this case, the classification models achieved similar results,
+                  but the regression model was much less effective. This underscores the importance of selecting the
+                  appropriate model for the problem at hand.
+                </p>
+                <p>
+                  The report also highlighted the importance of variable selection, as certain features were found to be
+                  more important than others in predicting the target variable. This suggests that careful consideration
+                  of the relevance and importance of individual features is crucial for effective model building.
+                  Moreover, it was shown that balancing training data can lead to different results, underscoring the
+                  importance of assessing the impact of various data preprocessing and handling techniques on model
+                  performance.
+                </p>
+                <p>
+                  In summary, this report reinforces the idea that data science and machine learning require careful
+                  attention to model selection, variable selection, and data handling techniques. Different models and
+                  preprocessing techniques can lead to very different results, so a thoughtful and iterative approach is
+                  necessary to arrive at the most accurate and effective model for a given problem.
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/DATA%20603-L02%20Group%201%20Project%20-%20Fall22%20-%20NHL%20Goalies.pdf">Findings
+                    Outlined in Accompanying PDF</a>
+                </p>
+              </article>
+            </section>
+
+          </section>
+          <hr />
+
+
+
+          <section class="text-wrap" id="nhl">
+            <h1><a href="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression">Modeling NHL Goalie Save
+                Percentages Based on Player Attributes</a></h1>
+                <p>
+                  Contributers: Jordan Keelan, Arthur Trim, Kevin Treptau, Abrie Le roux, Sean Dornan 
+                </p>
+
+
+            <section class="main-section text-wrap" id="problem_statement_nhl">
+              <header class="h3">Problem Statement</header>
+              <br />
+              <article>
+                <p>
+                  NHL teams are big business, and they spend a lot of time and money on player selection. Each team can
+                  only dress two goaltenders, so selecting perfromative players is essential. Our goal was to take an
+                  approach to goaltender evaluation and performance prediction using data specific to individual
+                  goaltenders in a specific season and excluding various team- and game-based factors that could not
+                  only vary from year to year, but team to team, and game to game for a specific goaltender.
+                </p>
+              </article>
+            </section>
+
+            <section class="main-section text-wrap" id="methodology_nhl">
+              <header class="h3">Methodology</header>
+              <br />
+              <article>
+                <p>
+                  Our approach to solving this problem involved the use of Multiple Linear Regression Model, written in
+                  R, that predicts an individual goalie’s save percentage based on their attributes. We used data
+                  visualization (ggplot) and statistical analysis to identify cutoff values for ‘games played’ to
+                  improve consistency. We manually conducted backward elimination model selection, resulting in a valid
+                  interactive model that outperformed automated step-wise selection in terms of RMSE and R squared adj.
+                </p>
+            </section>
+
+            <section class="main-section text-wrap" id="model_dev_nhl">
+              <header class="h3">Model Development</header>
+              <br />
+              <article>
+                <p>
+                  We used Multiple Linear Regression Model to predict an individual goaltender’s save percentage. The
+                  model was developed in R programming language, and we used ggplot for data visualization. To improve
+                  the consistency of our predictions, we identified the cutoff values for ‘games played’ through
+                  statistical analysis. The model was then manually optimized through backward elimination model
+                  selection, which resulted in a more accurate model compared to the automated step-wise selection
+                  process.
+                </p>
+              </article>
+              <img
+                src="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/Model_Output.png?raw=true"
+                , class="center" , alt="R Model Output">
+            </section>
+
+            <section class="main-section text-wrap" id="model_diag_nhl">
+              <header class="h3">Model Diagnostics</header>
+              <br />
+              <article>
+                <p>
+                  To ensure the validity of our model, we conducted several model diagnostics, including Linearity,
+                  Independence, Equal Variance, Normality of Residuals, Multicolinearity, and Outlier assumptions. We
+                  made sure that all the assumptions were satisfied to ensure the robustness and accuracy of our
+                  predictions.
+                </p>
             </section>
 
             <section class="main-section text-wrap" id="conclusions_nhl">
               <header class="h3">Conclusions</header>
               <br />
               <article>
-              <p>
-                Our project demonstrated the feasibility of using Multiple Linear Regression Model to predict the save percentage of NHL goaltenders based on their individual attributes. Our approach showed an improvement in the accuracy of predictions compared to the traditional methods. The model was optimized through backward elimination model selection, and the model diagnostics confirmed that all the assumptions were satisfied, ensuring the robustness of our predictions.
-              </p>
+                <p>
+                  Our project demonstrated the feasibility of using Multiple Linear Regression Model to predict the save
+                  percentage of NHL goaltenders based on their individual attributes. Our approach showed an improvement
+                  in the accuracy of predictions compared to the traditional methods. The model was optimized through
+                  backward elimination model selection, and the model diagnostics confirmed that all the assumptions
+                  were satisfied, ensuring the robustness of our predictions.
+                </p>
               </article>
             </section>
 
@@ -123,18 +408,28 @@
               <header class="h3">What I Learned</header>
               <br />
               <article>
-              <p>
-                In this project, I explored the use of Multiple Linear Regression to evaluate and predict the performance of NHL goaltenders. I encountered some challenges along the way, such as realizing that the response variable of our model, save percentage, was better modeled with a sigmoidal curve rather than a linear model. However, since advanced statistical models were beyond the scope of the class, we continued to work with multiple linear regression.
-              </p>
-              <p>
-                Despite its limitations, our model was reasonably effective, with an adjusted R-squared value of 0.4, and produced results that were within the acceptable range of values for the response variable.
-              </p>
-              <p>
-                Through this project, I gained a deeper understanding of the importance of proper model selection for specific problems, the process of feature selection and model development, and the significance of model diagnostics through assumption testing. I also learned about the limitations and strengths of multiple linear regression models and how they can be used in real-world applications.
-              </p>
-              <p>
-                <a href="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/DATA%20603-L02%20Group%201%20Project%20-%20Fall22%20-%20NHL%20Goalies.pdf">Findings Outlined in Accompanying PDF</a>
-              </p>
+                <p>
+                  In this project, I explored the use of Multiple Linear Regression to evaluate and predict the
+                  performance of NHL goaltenders. I encountered some challenges along the way, such as realizing that
+                  the response variable of our model, save percentage, was better modeled with a sigmoidal curve rather
+                  than a linear model. However, since advanced statistical models were beyond the scope of the class, we
+                  continued to work with multiple linear regression.
+                </p>
+                <p>
+                  Despite its limitations, our model was reasonably effective, with an adjusted R-squared value of 0.4,
+                  and produced results that were within the acceptable range of values for the response variable.
+                </p>
+                <p>
+                  Through this project, I gained a deeper understanding of the importance of proper model selection for
+                  specific problems, the process of feature selection and model development, and the significance of
+                  model diagnostics through assumption testing. I also learned about the limitations and strengths of
+                  multiple linear regression models and how they can be used in real-world applications.
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression/blob/main/DATA%20603-L02%20Group%201%20Project%20-%20Fall22%20-%20NHL%20Goalies.pdf">Findings
+                    Outlined in Accompanying PDF</a>
+                </p>
               </article>
             </section>
 
@@ -146,37 +441,49 @@
 
 
           <section class="text-wrap" id="emerg">
-            <h1><a href="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis">Impact of Societal Events on Alberta Emergency Shelter Occupancy: A Statistical Analysis</a></h1>
-            
+            <h1><a
+                href="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis">Impact
+                of Societal Events on Alberta Emergency Shelter Occupancy: A Statistical Analysis</a></h1>
+
 
             <section class="main-section text-wrap" id="problem_statement_emerg">
               <header class="h3">Problem Statement</header>
               <br />
               <article>
-              <p>
-                The purpose of this project is to investigate the impact of two societal events - the COVID-19 pandemic and the 2014 oil downturn - on emergency shelter occupancy in Alberta. The project aims to determine if the COVID-19 pandemic created a significant change in emergency shelter occupancy and if it has resulted in a greater proportion of women seeking emergency shelter compared to the 2014 oil downturn.  
-              </p>
-            </article>
+                <p>
+                  The purpose of this project is to investigate the impact of two societal events - the COVID-19
+                  pandemic and the 2014 oil downturn - on emergency shelter occupancy in Alberta. The project aims to
+                  determine if the COVID-19 pandemic created a significant change in emergency shelter occupancy and if
+                  it has resulted in a greater proportion of women seeking emergency shelter compared to the 2014 oil
+                  downturn.
+                </p>
+              </article>
             </section>
 
             <section class="main-section text-wrap" id="methodology_emerg">
               <header class="h3">Methodology</header>
               <br />
               <article>
-              <p>
-                The project investigated two topics:
-              </p>
+                <p>
+                  The project investigated two topics:
+                </p>
                 <ol>
                   <li>
-                    <p>Has the COVID-19 pandemic created a significant difference in emergency shelter occupancy? Has it increased or decreased the quantity of people experiencing homelessness?</p>
+                    <p>Has the COVID-19 pandemic created a significant difference in emergency shelter occupancy? Has it
+                      increased or decreased the quantity of people experiencing homelessness?</p>
                     <ul>
-                      <p>We employed a linear regression Model to determine a trend in emergency shelter occupancy rates and compared the results to actual values recorded. The analysis was performed using R programming language and the dataset was cleaned and transformed in R.</p>
+                      <p>We employed a linear regression Model to determine a trend in emergency shelter occupancy rates
+                        and compared the results to actual values recorded. The analysis was performed using R
+                        programming language and the dataset was cleaned and transformed in R.</p>
                     </ul>
                   </li>
                   <li>
-                    <p>Did the COVID-19 pandemic result in a greater proportion of women seeking emergency shelter compared to other the 2014 oil downturn?</p>
+                    <p>Did the COVID-19 pandemic result in a greater proportion of women seeking emergency shelter
+                      compared to other the 2014 oil downturn?</p>
                     <ul>
-                      <p>An Analysis of Difference of Proportion was carried out to identify a statistically significant increase in women's shelter occupancy in the first 12 months of the COVID-19 lockdown compared to the first 12 months of the 2014 downturn.</p>
+                      <p>An Analysis of Difference of Proportion was carried out to identify a statistically significant
+                        increase in women's shelter occupancy in the first 12 months of the COVID-19 lockdown compared
+                        to the first 12 months of the 2014 downturn.</p>
                     </ul>
                   </li>
                 </ol>
@@ -186,15 +493,25 @@
               <header class="h3">Conclusions</header>
               <br />
               <article>
-              <p>
-                Our linear regression model outlined the decline in emergency shelter occupancy from 2014 to 2020. Though, as this is time-series data, no real conclusions could be drawn as to the long term effect of covid-19 on shelter occupancy.  
-              </p>
-              <img src="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/linear_regression.png?raw=true", class="center", alt="Linear Regression Model">
-              <p>
-                Our proportion comparison of the two downturns did show that womans shelter occupancy was a larger proportion of total shelter occupancy during the first year of the covid-19 pandemic than during the first year of the 2014 downturn.
-              </p>
-              <img src="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/combined_shelter_occ.png?raw=true", class="center", alt="proportion over time graph">
-              <img src="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/womans_proportion.png?raw=true", class="center", alt="proportion VIOLINS">
+                <p>
+                  Our linear regression model outlined the decline in emergency shelter occupancy from 2014 to 2020.
+                  Though, as this is time-series data, no real conclusions could be drawn as to the long term effect of
+                  covid-19 on shelter occupancy.
+                </p>
+                <img
+                  src="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/linear_regression.png?raw=true"
+                  , class="center" , alt="Linear Regression Model">
+                <p>
+                  Our proportion comparison of the two downturns did show that womans shelter occupancy was a larger
+                  proportion of total shelter occupancy during the first year of the covid-19 pandemic than during the
+                  first year of the 2014 downturn.
+                </p>
+                <img
+                  src="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/combined_shelter_occ.png?raw=true"
+                  , class="center" , alt="proportion over time graph">
+                <img
+                  src="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/images/womans_proportion.png?raw=true"
+                  , class="center" , alt="proportion VIOLINS">
               </article>
             </section>
 
@@ -202,21 +519,35 @@
               <header class="h3">What I Learned</header>
               <br />
               <article>
-              <p>
-                This project provides valuable information on the impact of societal events on emergency shelter occupancy in Alberta. The results of the Simple Linear Regression Model and the Analysis of Difference of Proportion help to understand the trend in emergency shelter occupancy rates and the proportion of women seeking emergency shelter during the COVID-19 pandemic and the 2014 oil downturn. The findings of the project can be useful for policymakers, government agencies, and organizations working to address the issue of homelessness.              </p>
-              <p>
-                This project served again as a great learning tool or me. As my first foray into linear regression and proportion analysis, I learned a great deal about the limitations of strength of each moethod. Again here, our analysis suffers from the fact that we were given a set of tools and looked for a problem to solve with them, rather than identifying a problem and selecting the best method to solve it. In this case, knowledge of time-series analysis would have made out analysis more meaningful.              </p>
-              <p>
-                It was interesting to see that the proportion of emergency occupants in womans shelters did increase in the covid-19 pandemic, but that following the pandemic that proportion hit all time lows. This is especially interesting when you consider that while emergency shelter occupancy rates were dropping steadily in 6 years prior to the pandemic.              </p>
-              <p>
-                <a href="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/Data%20602%20Project.docx.pdf">Findings Outlined in Accompanying PDF</a>
-              </p>
+                <p>
+                  This project provides valuable information on the impact of societal events on emergency shelter
+                  occupancy in Alberta. The results of the Simple Linear Regression Model and the Analysis of Difference
+                  of Proportion help to understand the trend in emergency shelter occupancy rates and the proportion of
+                  women seeking emergency shelter during the COVID-19 pandemic and the 2014 oil downturn. The findings
+                  of the project can be useful for policymakers, government agencies, and organizations working to
+                  address the issue of homelessness. </p>
+                <p>
+                  This project served again as a great learning tool or me. As my first foray into linear regression and
+                  proportion analysis, I learned a great deal about the limitations of strength of each moethod. Again
+                  here, our analysis suffers from the fact that we were given a set of tools and looked for a problem to
+                  solve with them, rather than identifying a problem and selecting the best method to solve it. In this
+                  case, knowledge of time-series analysis would have made out analysis more meaningful. </p>
+                <p>
+                  It was interesting to see that the proportion of emergency occupants in womans shelters did increase
+                  in the covid-19 pandemic, but that following the pandemic that proportion hit all time lows. This is
+                  especially interesting when you consider that while emergency shelter occupancy rates were dropping
+                  steadily in 6 years prior to the pandemic. </p>
+                <p>
+                  <a
+                    href="https://github.com/JordanKeelan/Alberta_Emergency_Shelter_Occupancy_Statistical_Analysis/blob/main/Data%20602%20Project.docx.pdf">Findings
+                    Outlined in Accompanying PDF</a>
+                </p>
               </article>
             </section>
 
           </section>
 
-        </section>
+          </section>
         </main>
       </div>
     </div>
@@ -231,23 +562,26 @@
     display: flex;
     align-items: center;
     padding: 1rem;
-    }
+  }
+
   .banner img {
     width: 175px;
     height: 175px;
     border-radius: 50%;
     margin-right: 1rem;
-    }
+  }
+
   .banner h1 {
     color: --background-color;
     font-size: 1.5rem;
     margin: 0;
-    }
+  }
+
   .banner h2 {
     color: --background-color;
     font-size: 1.25rem;
     margin: 0;
-    }
+  }
 
   /* Custom color scheme */
   :root {
