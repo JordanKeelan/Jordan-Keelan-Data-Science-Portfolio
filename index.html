@@ -34,13 +34,16 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav d-flex flex-column list-group-flush border-bottom">
               <li class="navbar-item list-group-item border-top">
-                <a class="nav-link" href="#music">Spotify Popularity Modeling</a>
+                <a class="nav-link" href="#food">Food Crop Tableau Visualizations</a>
               </li>
               <li class="navbar-item list-group-item border-top">
-                <a class="nav-link" href="#nhl">NHL Goalie Model</a>
+                <a class="nav-link" href="#music">Spotify Popularity ML Modeling</a>
+              </li>
+              <li class="navbar-item list-group-item border-top">
+                <a class="nav-link" href="#nhl">NHL Goalie Regression Model</a>
               </li>
               <li class="navbar-item list-group-item">
-                <a class="nav-link" href="#emerg">Emergency Shelter Analysis</a>
+                <a class="nav-link" href="#emerg">Emergency Shelter Data Analysis</a>
               </li>
             </ul>
           </div>
@@ -79,12 +82,62 @@
             </article>
           </section>
 
+          <section class="text-wrap" id="food">
+            <h1><a href="https://medium.com/@jordan.keelan/farm-to-table-visualizing-global-food-dynamics-c45115135433">Farm to Table: Visualizing Global Food
+                Dynamics</a></h1>
+            <p>
+              Contributors: Jordan Keelan
+            </p>
+
+            <section class="main-section text-wrap" id="Discussion Food">
+              <header class="h3">Discussion</header>
+              <br />
+              <article>
+                <p>
+                  I wrote this to because I found a very interesting dataset provided by the Food and Agriculture
+                  Organization of the United Nations (FAOSTAT), FAOSTAT provides free access to food and agriculture
+                  data for over 245 countries and territories and covers all FAO regional groupings from 1961 to the
+                  most recent year available. Food and food security has always been a great passion of mine, and I
+                  wanted to develop a greater understanding of where our food comes from, how food production has
+                  changed, and what the effects of globalization and population growth have had on food production and
+                  security.
+                </p>
+              </article>
+            </section>
+
+            <section class="main-section text-wrap" id="learned_music">
+              <header class="h3">What I Learned</header>
+              <br />
+              <article>
+                <p>
+                  Writing a data visualization article was a rewarding experience, as it involved working with a
+                  large dataset and presenting the data in a meaningful way. This dataset was originally wide form and
+                  required me to melt the data, which makes it easier to work with and analyze. As well, the dataset had
+                  significantly more data than was required to answer the questions I developed, so filtering and
+                  adjusting units was key to the investigation.
+
+                  Once the data has been prepared, it is important to choose the correct types of data visualization to
+                  represent the ideas that are being communicated. This involves considering factors such as the type of
+                  data, the purpose of the visualization, and the audience for the article. Creating effective
+                  visualizations required knowledge of Tableau, and gave me the opportunity to explore its various features.
+
+                  Overall, writing a data visualization article requires a combination of technical skills, 
+                  creativity, and curiosity. By working with large datasets, understanding how to filter and manipulate data, and
+                  selecting the most effective types of visualization, authors can create engaging and informative
+                  articles that effectively communicate complex ideas.
+                </p>
+              </article>
+            </section>
+
+          </section>
+          <hr />
+
           <section class="text-wrap" id="music">
             <h1><a href="https://github.com/kaneiscoding/DATA-606-Final-Project">Uncovering the Secrets of Song Success:
                 A Statistical Analysis of Popular Music</a></h1>
-                <p>
-                  Contributers: Jordan Keelan, Kane Smith, Scott Bennett, Aruthur Trim, Rodrigo Alvarez
-                </p>
+            <p>
+              Contributors: Jordan Keelan, Kane Smith, Scott Bennett, Arthur Trim, Rodrigo Alvarez
+            </p>
 
             <section class="main-section text-wrap" id="problem_statement_music">
               <header class="h3">Problem Statement</header>
@@ -96,7 +149,7 @@
                     unsuccessful songs into their fundamental elements and analyzing patterns influencing listener
                     emotions, they can leverage these findings in the creation of novel music. Understanding these song
                     features and how they contribute to popularity can help artists stay ahead of musical trends and
-                    create more impactfull music.</p>
+                    create more impactful music.</p>
                   <p>This project's purpose is to analyze the features of songs (as listed in the "Summary of Variables"
                     section above) and to develop multiple statistical models to determine the relevance of these
                     features to a song's popularity. This analysis will provide valuable insights into the music
@@ -176,7 +229,7 @@
                   threshold for a "hit." Any song with a popularity score above 42 out of 100 was considered a hit.</p>
                 <p>
                   However, we encountered an imbalance in the training dataset, with a ratio of hits to non-hits of 1:3.
-                  To address this issue, we applied downsampling to even out the class distribution.</p>
+                  To address this issue, we applied down-sampling to even out the class distribution.</p>
                 </p>
               </article>
             </section>
@@ -190,11 +243,11 @@
                 </p>
                 <ul>
                   <p>
-                    Multivariate Normality - mulri.norm Test - Failed. Due to failure, Quadratic Discrininant Anlalysis
+                    Multivariate Normality - mulri.norm Test - Failed. Due to failure, Quadratic Discriminant Analysis
                     not conducted.
                   </p>
                   <p>
-                    Equalty of Variance - Levene Test - Failed.
+                    Equality of Variance - Levene Test - Failed.
                   </p>
                 </ul>
 
@@ -256,7 +309,7 @@
                   33.33%, respectively.
                 </p>
                 <p>
-                  Balancinovided some interesting insight: with the unbalanced set, we saw that three of our methods
+                  Balancing provided some interesting insight: with the unbalanced set, we saw that three of our methods
                   produced misclassification rates near the proportion of hits in the dataset, 25%. Following balancing
                   our classes in the training models, we saw an overall increase in misclassification rate, with an
                   increase in both type 1 and type 2 error. As we used the caret library to conduct this
@@ -265,14 +318,14 @@
                   test set that was heavily skewed to no-hits the worsening of the model could be explained.
                 </p>
                 <p>
-                  In this stigation, a false positive should be considered worse than a false negative. As a false
+                  In this situation, a false positive should be considered worse than a false negative. As a false
                   positive could cause a streaming service, or record label to invest in a song that is not going to be
                   a hit. Alternatively, not investing money in a song could mean missed opportunity but does not
                   directly cause loss of capital. So in the case of both classification models, type 1 error was
                   worsened.
                 </p>
                 <p>
-                  Balancine training data for the Classification Tree improved the number of features used in modeling
+                  Balancing training data for the Classification Tree improved the number of features used in modeling
                   beyond just loudness and explicitness, and we increased from 2 to 9 internal nodes. However, it had
                   poorer performance overall.
                 </p>
@@ -328,9 +381,9 @@
           <section class="text-wrap" id="nhl">
             <h1><a href="https://github.com/JordanKeelan/NHL_Goalie_Multiple_Linear_Regression">Modeling NHL Goalie Save
                 Percentages Based on Player Attributes</a></h1>
-                <p>
-                  Contributers: Jordan Keelan, Arthur Trim, Kevin Treptau, Abrie Le roux, Sean Dornan 
-                </p>
+            <p>
+              Contributers: Jordan Keelan, Arthur Trim, Kevin Treptau, Abrie Le roux, Sean Dornan
+            </p>
 
 
             <section class="main-section text-wrap" id="problem_statement_nhl">
@@ -339,7 +392,7 @@
               <article>
                 <p>
                   NHL teams are big business, and they spend a lot of time and money on player selection. Each team can
-                  only dress two goaltenders, so selecting perfromative players is essential. Our goal was to take an
+                  only dress two goaltenders, so selecting performative players is essential. Our goal was to take an
                   approach to goaltender evaluation and performance prediction using data specific to individual
                   goaltenders in a specific season and excluding various team- and game-based factors that could not
                   only vary from year to year, but team to team, and game to game for a specific goaltender.
